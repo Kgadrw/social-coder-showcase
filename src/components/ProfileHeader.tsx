@@ -14,14 +14,21 @@ export function ProfileHeader() {
       >
         <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-black/10"></div>
         <div className="absolute top-6 right-6 z-20">
-          <Button 
-            variant="secondary" 
-            size="sm"
-            className="bg-white/90 hover:bg-white text-foreground shadow-card backdrop-blur-sm"
-          >
-            <ExternalLink className="w-4 h-4 mr-2" />
-            View My Work
-          </Button>
+         <a 
+  href="https://github.com/Kgadrw" 
+  target="_blank" 
+  rel="noopener noreferrer"
+>
+  <Button 
+    variant="secondary" 
+    size="sm"
+    className="bg-white/90 hover:bg-white text-foreground shadow-card backdrop-blur-sm"
+  >
+    <ExternalLink className="w-4 h-4 mr-2" />
+    View My Work
+  </Button>
+</a>
+
         </div>
       </div>
 
