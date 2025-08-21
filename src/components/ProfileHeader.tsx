@@ -23,7 +23,7 @@ export function ProfileHeader() {
           </Button>
         </div>
       </div>
-      <div className="px-8 pb-8 relative">
+      <div className="px-8 pb-8 relative bg-white">
         <div className="flex flex-col sm:flex-row items-start sm:items-end gap-6 -mt-16 relative z-10">
           <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-white shadow-profile bg-white">
             <img 
@@ -33,14 +33,14 @@ export function ProfileHeader() {
             />
           </div>
           
-          <div className="flex-1 sm:pb-4">
-            <h1 className="text-3xl font-bold text-foreground mb-2">GAD KALISA</h1>
-            <p className="text-xl text-muted-foreground mb-3">
+          <div className="flex-1 sm:pb-4 bg-white/95 backdrop-blur-sm rounded-lg p-4 sm:p-0 sm:bg-transparent shadow-card sm:shadow-none">
+            <h1 className="text-3xl font-bold text-gray-900 mb-2 drop-shadow-sm">GAD KALISA</h1>
+            <p className="text-xl text-gray-700 mb-3 font-medium">
               Frontend Web Developer | UI/UX Designer
             </p>
-            <div className="flex items-center gap-2 text-muted-foreground">
+            <div className="flex items-center gap-2 text-gray-600">
               <MapPin className="w-4 h-4" />
-              <span>Kigali, Rwanda</span>
+              <span className="font-medium">Kigali, Rwanda</span>
             </div>
           </div>
         </div>
