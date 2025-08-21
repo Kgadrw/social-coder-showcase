@@ -8,11 +8,11 @@ export function ProfileHeader() {
   return (
     <Card className="bg-gradient-hero border-0 shadow-profile overflow-hidden">
       <div 
-        className="h-32 relative bg-cover bg-center"
+        className="h-48 relative bg-cover bg-center"
         style={{ backgroundImage: `url(${coverImage})` }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-black/10"></div>
-        <div className="absolute top-4 right-4 z-20">
+        <div className="absolute top-6 right-6 z-20">
           <Button 
             variant="secondary" 
             size="sm"
@@ -23,9 +23,9 @@ export function ProfileHeader() {
           </Button>
         </div>
       </div>
-      <div className="px-8 pb-8 relative bg-white">
-        <div className="flex flex-col sm:flex-row items-start sm:items-end gap-6 -mt-16 relative z-10">
-          <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-white shadow-profile bg-white">
+      <div className="px-8 pb-8 pt-4 relative bg-white">
+        <div className="flex flex-col sm:flex-row items-start sm:items-end gap-6 -mt-20 relative z-10">
+          <div className="w-36 h-36 rounded-full overflow-hidden border-6 border-white shadow-profile bg-white">
             <img 
               src={profilePicture} 
               alt="GAD KALISA" 
@@ -33,7 +33,7 @@ export function ProfileHeader() {
             />
           </div>
           
-          <div className="flex-1 sm:pb-4 bg-white/95 backdrop-blur-sm rounded-lg p-4 sm:p-0 sm:bg-transparent shadow-card sm:shadow-none">
+          <div className="flex-1 sm:pb-6 bg-white/95 backdrop-blur-sm rounded-lg p-4 sm:p-0 sm:bg-transparent shadow-card sm:shadow-none">
             <h1 className="text-3xl font-bold text-gray-900 mb-2 drop-shadow-sm">GAD KALISA</h1>
             <p className="text-xl text-gray-700 mb-3 font-medium">
               Frontend Web Developer | UI/UX Designer
