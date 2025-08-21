@@ -6,7 +6,8 @@ import coverImage from "@/assets/cover-nature.jpg";
 
 export function ProfileHeader() {
   return (
-    <Card className="bg-gradient-hero border-0 shadow-profile overflow-hidden">
+    <Card className="bg-white border-0 shadow-profile overflow-hidden">
+      {/* Cover Image */}
       <div 
         className="h-48 relative bg-cover bg-center"
         style={{ backgroundImage: `url(${coverImage})` }}
@@ -23,8 +24,11 @@ export function ProfileHeader() {
           </Button>
         </div>
       </div>
-      <div className="px-8 pb-8 pt-4 relative bg-white">
-        <div className="flex flex-col sm:flex-row items-start sm:items-end gap-6 -mt-20 relative z-10">
+
+      {/* Profile Info Section */}
+      <div className="px-8 pb-8 relative">
+        <div className="flex flex-col sm:flex-row items-start sm:items-end gap-6 -mt-16 relative z-10">
+          {/* Profile Picture */}
           <div className="w-36 h-36 rounded-full overflow-hidden border-6 border-white shadow-profile bg-white">
             <img 
               src={profilePicture} 
@@ -32,13 +36,14 @@ export function ProfileHeader() {
               className="w-full h-full object-cover"
             />
           </div>
-          
-          <div className="flex-1 sm:pb-6 bg-white/95 backdrop-blur-sm rounded-lg p-4 sm:p-0 sm:bg-transparent shadow-card sm:shadow-none">
-            <h1 className="text-3xl font-bold text-gray-900 mb-2 drop-shadow-sm">GAD KALISA</h1>
-            <p className="text-xl text-gray-700 mb-3 font-medium">
+
+          {/* Name + Career directly under cover */}
+          <div className="flex flex-col justify-center">
+            <h1 className="text-3xl font-bold text-gray-900 mb-1">GAD KALISA</h1>
+            <p className="text-lg text-gray-700 font-medium">
               Frontend Web Developer | UI/UX Designer
             </p>
-            <div className="flex items-center gap-2 text-gray-600">
+            <div className="flex items-center gap-2 text-gray-600 mt-2">
               <MapPin className="w-4 h-4" />
               <span className="font-medium">Kigali, Rwanda</span>
             </div>
