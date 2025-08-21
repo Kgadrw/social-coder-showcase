@@ -29,6 +29,7 @@ const contactInfo = [
 export function ContactSidebar() {
   return (
     <div className="space-y-6">
+      {/* Contact Info */}
       <Card className="bg-gradient-card shadow-card border-0 p-6">
         <h2 className="text-lg font-semibold mb-4 text-foreground">Contact Information</h2>
         
@@ -51,27 +52,42 @@ export function ContactSidebar() {
         </div>
       </Card>
 
+      {/* Quick Actions */}
       <Card className="bg-gradient-card shadow-card border-0 p-6">
         <h3 className="text-lg font-semibold mb-4 text-foreground">Let's Connect</h3>
         
         <div className="space-y-3">
-          <Button className="w-full bg-gradient-primary hover:shadow-hover transition-all duration-300" size="sm">
-            <MessageCircle className="w-4 h-4 mr-2" />
-            Send Message
-          </Button>
-          
-          <Button variant="outline" className="w-full" size="sm">
-            <Phone className="w-4 h-4 mr-2" />
-            Schedule Call
-          </Button>
-          
-          <Button variant="secondary" className="w-full" size="sm">
-            <Download className="w-4 h-4 mr-2" />
-            Download CV
-          </Button>
+          {/* Send Email */}
+          <a href="mailto:kalisagad05@gmail.com">
+            <Button className="w-full bg-gradient-primary hover:shadow-hover transition-all duration-300" size="sm">
+              <MessageCircle className="w-4 h-4 mr-2" />
+              Send Message
+            </Button>
+          </a>
+
+          {/* WhatsApp Call/Text */}
+          <a 
+            href="https://wa.me/250791998365" 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            <Button variant="outline" className="w-full" size="sm">
+              <Phone className="w-4 h-4 mr-2" />
+              Schedule Call
+            </Button>
+          </a>
+
+          {/* Download CV */}
+          <a href="/CV.pdf" download>
+            <Button variant="secondary" className="w-full" size="sm">
+              <Download className="w-4 h-4 mr-2" />
+              Download CV
+            </Button>
+          </a>
         </div>
       </Card>
 
+      {/* Availability */}
       <Card className="bg-gradient-card shadow-card border-0 p-6">
         <h3 className="text-lg font-semibold mb-4 text-foreground">Availability</h3>
         
