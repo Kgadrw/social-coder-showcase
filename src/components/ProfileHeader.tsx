@@ -29,7 +29,7 @@ export function ProfileHeader() {
       <div className="relative px-6 pb-8">
         <div className="flex flex-col items-center -mt-20">
           {/* Profile Picture */}
-          <div className="w-40 h-40 rounded-full overflow-hidden border-8 border-white shadow-profile bg-white">
+          <div className="w-40 h-40 rounded-full overflow-hidden border-2 border-green-600 shadow-profile bg-white">
             <img 
               src={profilePicture} 
               alt="GAD KALISA" 
