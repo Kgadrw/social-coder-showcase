@@ -35,21 +35,22 @@
     --input: 240 10% 90%;
     --ring: 235 85% 60%;
 
-    /* Custom portfolio colors */
+    /* Custom portfolio colors - Light theme */
     --gradient-primary: linear-gradient(135deg, hsl(235 85% 60%) 0%, hsl(265 85% 65%) 100%);
     --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(240 15% 98%) 100%);
     --gradient-hero: linear-gradient(135deg, hsl(235 85% 95%) 0%, hsl(265 85% 95%) 100%);
     
-    /* Shadows */
+    /* Light theme shadows */
     --shadow-card: 0 4px 20px hsl(235 85% 60% / 0.1);
     --shadow-profile: 0 8px 32px hsl(235 85% 60% / 0.15);
     --shadow-hover: 0 8px 25px hsl(235 85% 60% / 0.2);
     
-    /* Animations */
+    /* Smooth animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
-    --radius: 0.5rem;
+    /* Modern rounded corners */
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -69,41 +70,63 @@
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Modern dark theme - Deep charcoal backgrounds */
+    --background: 0 0% 7%;
+    --foreground: 0 0% 90%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 12%;
+    --card-foreground: 0 0% 88%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 90%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    /* Electric blue primary accent */
+    --primary: 210 100% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 210 100% 70%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    /* Subtle secondary backgrounds */
+    --secondary: 0 0% 16%;
+    --secondary-foreground: 0 0% 85%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 0 0% 14%;
+    --muted-foreground: 0 0% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    /* Emerald green accent */
+    --accent: 160 85% 50%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
+    /* Subtle borders and inputs */
+    --border: 0 0% 20%;
+    --input: 0 0% 18%;
+    --ring: 210 100% 60%;
+
+    /* Enhanced gradients for dark mode */
+    --gradient-primary: linear-gradient(135deg, hsl(210 100% 60%) 0%, hsl(160 85% 50%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 12%) 0%, hsl(0 0% 15%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 8%) 0%, hsl(0 0% 12%) 100%);
+    
+    /* Enhanced shadows for depth */
+    --shadow-card: 0 8px 32px hsl(0 0% 0% / 0.3);
+    --shadow-profile: 0 12px 40px hsl(210 100% 60% / 0.2);
+    --shadow-hover: 0 16px 48px hsl(210 100% 60% / 0.25);
+    
+    /* Smooth transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    /* Sidebar styling */
+    --sidebar-background: 0 0% 8%;
+    --sidebar-foreground: 0 0% 85%;
+    --sidebar-primary: 210 100% 60%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 0 0% 85%;
+    --sidebar-border: 0 0% 18%;
+    --sidebar-ring: 210 100% 60%;
   }
 }
 
@@ -113,6 +136,33 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+/* Modern hover effects and interactions */
+@layer components {
+  .modern-card {
+    @apply bg-gradient-card backdrop-blur-sm border border-border/50 rounded-xl shadow-card transition-all duration-300;
+  }
+  
+  .modern-card:hover {
+    @apply shadow-hover -translate-y-1 border-border;
+  }
+  
+  .glass-effect {
+    @apply bg-background/80 backdrop-blur-md border border-border/30;
+  }
+  
+  .glow-effect {
+    @apply shadow-[0_0_20px_hsl(var(--primary)/0.3)];
+  }
+  
+  .smooth-hover {
+    @apply transition-all duration-300 ease-out;
+  }
+  
+  .smooth-hover:hover {
+    @apply scale-105 shadow-hover;
   }
 }
