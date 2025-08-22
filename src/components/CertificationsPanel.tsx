@@ -49,25 +49,25 @@ const typeColors = {
 
 export function CertificationsPanel() {
   return (
-    <Card className="bg-gradient-card shadow-card border-0 p-6">
-      <div className="flex items-center justify-between mb-6">
-        <h2 className="text-xl font-semibold text-foreground">Licenses & Certifications</h2>
-        <Award className="w-5 h-5 text-primary" />
+    <Card className="modern-card p-4 sm:p-6">
+      <div className="flex items-center justify-between mb-4 sm:mb-6">
+        <h2 className="text-lg sm:text-xl font-semibold text-foreground">Licenses & Certifications</h2>
+        <Award className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0" />
       </div>
       
-      <div className="space-y-4">
+      <div className="space-y-3 sm:space-y-4">
         {certifications.map((cert, index) => (
-          <div key={index} className="group border-l-2 border-primary/20 pl-4 py-2 hover:border-primary/50 transition-colors">
+          <div key={index} className="group border-l-2 border-primary/20 pl-3 sm:pl-4 py-2 hover:border-primary/50 transition-colors">
             <div className="flex items-start justify-between gap-2">
-              <div className="flex-1">
-                <h3 className="font-medium text-foreground group-hover:text-primary transition-colors">
+              <div className="flex-1 min-w-0">
+                <h3 className="font-medium text-foreground group-hover:text-primary transition-colors text-sm sm:text-base leading-tight">
                   {cert.title}
                 </h3>
-                <p className="text-sm text-muted-foreground mb-2">
+                <p className="text-xs sm:text-sm text-muted-foreground mb-2">
                   {cert.issuer} • {cert.date}
                 </p>
                 
-                <div className="flex items-center gap-2">
+                <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
                   <Badge 
                     variant="secondary" 
                     className={`text-xs ${typeColors[cert.type as keyof typeof typeColors]}`}
@@ -82,8 +82,8 @@ export function CertificationsPanel() {
                 </div>
               </div>
               
-              <button className="opacity-0 group-hover:opacity-100 transition-opacity p-1 hover:bg-muted rounded">
-                <ExternalLink className="w-4 h-4 text-muted-foreground" />
+              <button className="opacity-0 group-hover:opacity-100 transition-opacity p-1 hover:bg-muted rounded flex-shrink-0">
+                <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4 text-muted-foreground" />
               </button>
             </div>
           </div>

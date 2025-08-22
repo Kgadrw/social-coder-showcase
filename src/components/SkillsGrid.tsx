@@ -13,18 +13,18 @@ const skills = [
 
 export function SkillsGrid() {
   return (
-    <Card className="bg-gradient-card shadow-card border-0 p-6">
-      <h2 className="text-xl font-semibold mb-6 text-foreground">Technical Skills</h2>
+    <Card className="modern-card p-4 sm:p-6">
+      <h2 className="text-lg sm:text-xl font-semibold mb-4 sm:mb-6 text-foreground">Technical Skills</h2>
       
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 gap-3 sm:gap-4">
         {skills.map((skill, index) => (
           <div key={index} className="group">
-            <div className="flex items-center justify-between mb-2">
-              <span className="font-medium text-foreground">{skill.name}</span>
-              <span className="text-sm text-muted-foreground">{skill.level}%</span>
+            <div className="flex items-center justify-between mb-1.5 sm:mb-2">
+              <span className="font-medium text-foreground text-sm sm:text-base">{skill.name}</span>
+              <span className="text-xs sm:text-sm text-muted-foreground">{skill.level}%</span>
             </div>
             
-            <div className="h-2 bg-muted rounded-full overflow-hidden">
+            <div className="h-1.5 sm:h-2 bg-muted rounded-full overflow-hidden">
               <div 
                 className={`h-full bg-gradient-to-r ${skill.color} transition-all duration-1000 ease-out animate-[slideIn_1s_ease-out_forwards]`}
                 style={{ 
