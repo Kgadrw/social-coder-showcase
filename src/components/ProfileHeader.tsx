@@ -3,6 +3,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import profilePicture from "@/assets/profile-picture.jpg";
 import coverImage from "@/assets/cover-nature.jpg";
+import { ThemeToggle } from "./ThemeToggle";
 
 export function ProfileHeader() {
   return (
@@ -13,7 +14,8 @@ export function ProfileHeader() {
         style={{ backgroundImage: `url(${coverImage})` }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-black/10"></div>
-        <div className="absolute top-6 right-6 z-20">
+        <div className="absolute top-6 right-6 z-20 flex items-center gap-3">
+          <ThemeToggle />
          <a 
   href="https://github.com/Kgadrw" 
   target="_blank" 
@@ -45,11 +47,11 @@ export function ProfileHeader() {
           </div>
 
           {/* Name + Career under cover */}
-          <h1 className="mt-4 text-3xl font-bold text-gray-900">GAD KALISA</h1>
-          <p className="text-lg text-gray-700 font-medium">
+          <h1 className="mt-4 text-3xl font-bold text-foreground">GAD KALISA</h1>
+          <p className="text-lg text-foreground/80 font-medium">
             Frontend Web Developer | UI/UX Designer
           </p>
-          <div className="flex items-center gap-2 text-gray-600 mt-2">
+          <div className="flex items-center gap-2 text-muted-foreground mt-2">
             <MapPin className="w-4 h-4" />
             <span className="font-medium">Kigali, Rwanda</span>
           </div>
