@@ -6,6 +6,12 @@
 
 @layer base {
   :root {
+    --font-sans: "Noto Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+      Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+    --font-serif: "EB Garamond", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    --font-display: "Raleway", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+      Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+
     --background: 240 15% 97%;
     --foreground: 220 15% 15%;
 
@@ -15,9 +21,9 @@
     --popover: 0 0% 100%;
     --popover-foreground: 220 15% 15%;
 
-    --primary: 235 85% 60%;
+    --primary: 221 83% 32%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 235 85% 70%;
+    --primary-glow: 221 83% 42%;
 
     --secondary: 240 10% 96%;
     --secondary-foreground: 220 15% 25%;
@@ -33,17 +39,17 @@
 
     --border: 240 10% 90%;
     --input: 240 10% 90%;
-    --ring: 235 85% 60%;
+    --ring: 221 83% 32%;
 
     /* Custom portfolio colors - Light theme */
-    --gradient-primary: linear-gradient(135deg, hsl(235 85% 60%) 0%, hsl(265 85% 65%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(221 83% 32%) 0%, hsl(226 76% 40%) 100%);
     --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(240 15% 98%) 100%);
     --gradient-hero: linear-gradient(135deg, hsl(235 85% 95%) 0%, hsl(265 85% 95%) 100%);
     
     /* Light theme shadows */
-    --shadow-card: 0 4px 20px hsl(235 85% 60% / 0.1);
-    --shadow-profile: 0 8px 32px hsl(235 85% 60% / 0.15);
-    --shadow-hover: 0 8px 25px hsl(235 85% 60% / 0.2);
+    --shadow-card: 0 4px 20px hsl(221 83% 32% / 0.1);
+    --shadow-profile: 0 8px 32px hsl(221 83% 32% / 0.15);
+    --shadow-hover: 0 8px 25px hsl(221 83% 32% / 0.2);
     
     /* Smooth animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -136,18 +142,23 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-sans);
+    background-image: url("/wallpapaer.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  h1, h2, h3 {
+    font-family: var(--font-display);
   }
 }
 
-/* Modern hover effects and interactions */
 @layer components {
   .modern-card {
-    @apply bg-gradient-card backdrop-blur-sm border border-border/50 rounded-xl shadow-card transition-all duration-300;
-  }
-  
-  .modern-card:hover {
-    @apply shadow-hover -translate-y-1 border-border;
+    @apply bg-gradient-card backdrop-blur-sm border border-border/50 rounded-xl shadow-card;
   }
   
   .glass-effect {
@@ -159,10 +170,6 @@
   }
   
   .smooth-hover {
-    @apply transition-all duration-300 ease-out;
-  }
-  
-  .smooth-hover:hover {
-    @apply scale-105 shadow-hover;
+    @apply;
   }
 }
