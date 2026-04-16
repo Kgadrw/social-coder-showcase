@@ -1,4 +1,4 @@
-const API_BASE = import.meta.env.VITE_API_BASE ?? "http://localhost:5174";
+const API_BASE = import.meta.env.VITE_API_BASE ?? "https://gad-backend-x1ky.onrender.com";
 
 export async function apiFetch<T>(
   path: string,

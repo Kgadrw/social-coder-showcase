@@ -334,7 +334,7 @@ export default function Admin() {
       onUrl(
         url.startsWith("http")
           ? url
-          : `${import.meta.env.VITE_API_BASE ?? "http://localhost:5174"}${url}`,
+          : `${import.meta.env.VITE_API_BASE ?? "https://gad-backend-x1ky.onrender.com"}${url}`,
       );
       toast({ title: "Uploaded", description: "Image uploaded successfully." });
     } catch (e) {

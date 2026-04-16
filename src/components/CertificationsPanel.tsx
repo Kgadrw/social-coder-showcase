@@ -22,7 +22,7 @@ const typeColors = {
 
 function resolveImageUrl(url: string) {
   if (url.startsWith("http://") || url.startsWith("https://") || url.startsWith("data:")) return url;
-  const base = import.meta.env.VITE_API_BASE ?? "http://localhost:5174";
+  const base = import.meta.env.VITE_API_BASE ?? "https://gad-backend-x1ky.onrender.com";
   return `${base}${url}`;
 }
 
